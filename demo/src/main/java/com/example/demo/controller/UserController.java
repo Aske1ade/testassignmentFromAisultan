@@ -13,26 +13,25 @@ public class UserController {
     
     private final UserService userService;
 
-    // Конструктор
     public UserController(UserService userService) {
         this.userService = userService;
     }
 
-    // CREATE
+    // созадниего
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
         User created = userService.createUser(user);
         return ResponseEntity.ok(created);
     }
 
-    // READ ALL
+    // ридол
     @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userService.getAllUsers();
         return ResponseEntity.ok(users);
     }
 
-    // READ by ID
+    // по ид
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         User user = userService.getUserById(id);
@@ -42,7 +41,7 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
-    // UPDATE
+    // апдейт 
     @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
         User updated = userService.updateUser(id, userDetails);
