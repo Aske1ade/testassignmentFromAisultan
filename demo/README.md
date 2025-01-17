@@ -27,15 +27,15 @@
 # Подготовка окружения
 
 1. **Установить Docker** (Docker Desktop для Windows / Mac или Docker Engine для Linux).
-https://www.docker.com/get-started/ вот тут можно скчать потом обязательно надо перезагрузить систему для обновление path 
+https://www.docker.com/get-started/ вот тут можно скачать потом обязательно надо перезагрузить систему для обновление path 
 ---
 
 ## Запуск в Docker
 
-1. Откройте терминал (PowerShell / CMD / Bash) в корне проекта (там, где лежат `docker-compose.yml` и `Dockerfile`). тут это папка DEMO
+1. Откройте терминал (PowerShell / CMD / Bash) в корне проекта (там, где лежат `docker-compose.yml` и `Dockerfile`) тут это папка DEMO
 2. Выполните:
    docker-compose up --build
-   чем быстрее инте тем лучше
+   чем быстрее инет у вас тем лучше
    в консоли надо будет посмотреть не вылезло ли ошибок изза конфликтов версий и тд 
 3. Теперь проет доступен по адрессу:
    http://localhost:8080
